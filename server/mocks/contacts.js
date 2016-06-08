@@ -33,8 +33,12 @@ module.exports = function (app) {
 
   app.get('/api/search', function (req, res) {
     var text = req.query.text;
-    var matches = db.filter(contact => contact.name.indexOf(text) > -1);
-
+    var matches = db.filter(contact => {
+      var l = contact.name.indexOf(text.toLowerCase()) > -1;
+      var u = contact.name.indexOf(text.toUpperCase()) > -1;
+      var c = contact.name.indexOf(text.charAt(0).toUpperCase() + text.slice(1)) > -1;
+      return l || u || c; 
+    });
     res.json(multipleResponse(matches));
   });
 
