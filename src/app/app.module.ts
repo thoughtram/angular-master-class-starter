@@ -1,22 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { ContactsMaterialModule } from './contacts-material.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import { ContactsAppComponent } from './app.component';
+import { ContactsMaterialModule } from './contacts-material.module';
+import { FlexLayoutModule } from "@angular/flex-layout";
+
+import { AppStore } from './store/app-store';
+import { AppComponent } from "./app.component";
+import { DashboardComponent } from "./components/dashboard.component";
+import { VoterComponent } from "./components/voter.component";
+import { StatusComponent } from "./components/status.component";
 
 
 @NgModule({
-  declarations: [ContactsAppComponent],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     ContactsMaterialModule,
     FlexLayoutModule
   ],
-  bootstrap: [ContactsAppComponent]
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    VoterComponent,
+    StatusComponent
+  ],
+  providers: [AppStore],
+  bootstrap: [AppComponent]
 })
-export class ContactsModule {
-
+export class AppModule {
 }
+
