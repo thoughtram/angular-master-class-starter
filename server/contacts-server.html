@@ -1,0 +1,94 @@
+<style>
+  h2, h3 {
+    padding-left: 25px;
+  }
+
+  h3 {
+    font-size: 0.9em;
+    color: darkgray;
+    margin-top: -10px;
+    padding-bottom: 10px;
+  }
+
+  li {
+    line-height: 30px;
+    vertical-align: middle;
+  }
+
+  .name {
+    min-width: 200px;
+    display: inline-block;
+  }
+
+  .url {
+    padding-left: 25px;
+    width: 250px;
+    text-align: left;
+    background-color: #fff7df;
+    display: inline-block;
+  }
+
+  .action {
+    width: 50px;
+    padding-left: 20px;
+    color: lightgray;
+  }
+</style>
+
+<h2>Contacts Server</h2>
+<h3>REST API documentation for the Contacts HTTP server (used in thoughtram AMC).</h3>
+<ul>
+  <li>
+    <span class="name">
+      <a href="http://localhost:4201/api/contacts">
+        getContacts()
+      </a>
+    </span>
+    <span class="url">/api/contacts </span>
+    <span class="action"> GET </span></li>
+  <li>
+    <span class="name">
+      <a href="http://localhost:4201/api/contacts/0">
+        getContact(id)
+      </a>
+    </span>
+    <span
+        class="url">/api/contacts/:id </span>
+    <span class="action"> GET </span></li>
+  <li>
+    <span class="name">
+      <a href="http://localhost:4201/api/search?text=ch">
+        searchContacts(query)
+      </a>
+    </span>
+    <span
+        class="url">/api/search?text==&lt;xxx&gt;       </span>
+    <span class="action"> GET </span></li>
+  <li style="margin-bottom: 20px;">
+    <span class="name">
+      <a href="http://localhost:4201/api/check-email?email=christoph@thoughtram.io">
+        checkEmail(email)
+      </a>
+    </span>
+    <span class="url"> /api/check-email?email=&lt;xxx&gt; </span>
+    <span class="action"> GET </span>
+  </li>
+  <li>
+    <span class="name"> createContact(contact) </span>
+    <span
+        class="url"> /api/contacts/:id </span>
+    <span class="action"> PUT </span>
+  </li>
+  <li style="margin-bottom: 20px;">
+    <span class="name"> updateContact(contact) </span>
+    <span
+        class="url"> /api/contacts     </span>
+    <span class="action"> PUT </span>
+  </li>
+  <li><span class="name"> deleteContact(id)      </span>
+    <span
+        class="url"> /api/contacts/:id </span>
+    <span class="action"> DELETE </span>
+  </li>
+</ul>  
+
