@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@angular/material/prebuilt-themes/indigo-pink.css';
+
+body, html {
+  background-color: #f6f6f6;
+  position: relative;
+}
+
+html, body, trm-contacts-app, mat-drawer-container, .main-content {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+}
